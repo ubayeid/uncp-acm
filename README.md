@@ -75,4 +75,4 @@ If you have questions about the club, email us at **acm@uncp.edu**
 
 ---
 
-Made by Shruti Pallissery and the UNCP ACM team 💻
+Made by Shruti Pallissery 💻
