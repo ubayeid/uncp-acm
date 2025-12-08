@@ -1,176 +1,78 @@
-# UNCP ACM Chapter Website
+# UNCP ACM Website
 
-![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?logo=vite)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.18-06B6D4?logo=tailwindcss)
-![License](https://img.shields.io/badge/License-MIT-green)
+This is the website for the UNCP ACM (Association for Computing Machinery) student chapter. I built it with React, Vite, and Tailwind CSS for our class assignment.
 
-A modern, responsive, and professional website for the UNCP ACM (Association for Computing Machinery) Student Chapter. Built with React, Vite, and Tailwind CSS.
+## What's on the site?
 
----
+- **Home** - Shows what ACM is about with a bunch of cool features and why you should join
+- **About** - Talks about our mission, what we do, and why you don't need prior experience to join
+- **Officers** - Meet the team running the club
+- **Events** - See what events we're hosting and when
+- **Join** - Sign up form if you're interested in joining us
 
-## 🎯 Features
+## How to run it
 
-✅ **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-✅ **Modern UI/UX** - Clean, professional design with gradient accents and smooth transitions
-✅ **Fast Performance** - Built with Vite for lightning-fast development and production builds
-✅ **Multiple Pages** - Home, About, Officers, Events, and Join pages
-✅ **Interactive Components** - Responsive navbar with mobile menu, clickable cards, and CTAs
-✅ **Professional Branding** - UNCP ACM branding throughout with consistent color scheme
-✅ **Event Management** - Detailed event listings with dates, times, and locations
-✅ **Join Form** - Simple sign-up form to capture member interest
-✅ **Testimonials** - Student success stories and feedback
-✅ **Social Links** - Footer with social media integration
+First, clone the repo and install dependencies:
 
----
-
-## 📚 Pages Included
-
-| Page | Purpose |
-|------|---------|
-| **Home** | Hero section, value proposition, features overview, statistics, and CTAs |
-| **About** | Mission, values, what we offer, and membership eligibility |
-| **Officers** | Team leadership with roles, names, and responsibilities |
-| **Events** | Upcoming events with details, FAQs, and testimonials |
-| **Join** | Membership sign-up form with benefits and frequently asked questions |
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React 19.2.0** - UI library for building interactive components
-- **Vite 7.2.4** - Next-generation frontend build tool
-- **Tailwind CSS 3.4.18** - Utility-first CSS framework
-- **React Router DOM 6.28.0** - Client-side routing
-
-### Development Tools
-- **ESLint 9.39.1** - Code quality and style linting
-- **PostCSS 8.5.6** - CSS transformation and processing
-- **Autoprefixer 10.4.22** - Automatic vendor prefixes for CSS
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- **Node.js** 16.0 or higher
-- **npm** or **yarn** package manager
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sp0076/uncp-acm.git
-   cd uncp-acm
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-   The website will be available at `http://localhost:5173/`
-
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-5. **Preview production build**
-   ```bash
-   npm run preview
-   ```
-
----
-
-## 📁 Project Structure
-
-```
-uncp-acm/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx       # Navigation header
-│   │   └── Footer.jsx       # Footer with links
-│   ├── pages/
-│   │   ├── Home.jsx         # Landing page
-│   │   ├── About.jsx        # About the club
-│   │   ├── Officers.jsx     # Leadership team
-│   │   ├── Events.jsx       # Event listings
-│   │   └── Join.jsx         # Sign-up page
-│   ├── App.jsx              # Main app with routing
-│   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles
-├── index.html               # HTML entry
-├── vite.config.js           # Vite config
-├── tailwind.config.js       # Tailwind config
-├── package.json             # Dependencies
-└── README.md                # Documentation
+```bash
+git clone https://github.com/sp0076/uncp-acm.git
+cd uncp-acm
+npm install
 ```
 
----
+Then start the development server:
 
-## 🎨 Design Features
+```bash
+npm run dev
+```
 
-### Color Scheme
-- **Primary**: Blue (`#2563EB`)
-- **Secondary**: Indigo (`#4F46E5`)
-- **Accent**: Gradient effects and smooth transitions
+It'll run on `http://localhost:5173/`. Just open that up in your browser.
 
-### Components
-- Sticky navbar with mobile menu
-- Hero section with CTAs
-- Feature cards with emoji icons
-- Event cards with full details
-- Testimonial cards with ratings
-- Professional gradient buttons
+If you want to build it for production:
 
----
+```bash
+npm run build
+```
 
-## 🔗 Navigation
+## Technologies I used
 
-- `/` - Home
-- `/about` - About
-- `/officers` - Officers
-- `/events` - Events
-- `/join` - Join
+- **React** - to build the UI components
+- **Vite** - for fast development and building
+- **Tailwind CSS** - to style everything
+- **React Router** - so we can navigate between pages
 
----
+## Project structure
 
-## 📧 Contact
+```
+src/
+├── components/
+│   ├── Navbar.jsx       # The navigation bar at the top
+│   └── Footer.jsx       # Footer at the bottom
+├── pages/
+│   ├── Home.jsx         # Landing page
+│   ├── About.jsx        # About page
+│   ├── Officers.jsx     # Officers page
+│   ├── Events.jsx       # Events page
+│   └── Join.jsx         # Join page
+├── App.jsx              # Main app file with routing
+└── index.css            # Global styles
+```
 
-**UNCP ACM Chapter**
-- Email: acm@uncp.edu
-- Location: UNC Pembroke, NC
-- GitHub: [sp0076/uncp-acm](https://github.com/sp0076/uncp-acm)
+## Features
 
----
+- Mobile responsive design (works on phones, tablets, and desktops)
+- Smooth navigation between pages
+- Clickable feature cards that take you to relevant pages
+- Event details with dates and times
+- Sign-up form for new members
+- FAQ sections on the Events and Join pages
+- Student testimonials on the Events page
+- Social media links in the footer
 
-## 👤 Team
+## Contact
 
-**President**: Shruti Pallissery
-**Vice President**: Student Name
-**Treasurer**: Student Name
-**Secretary**: Student Name
-**Events Coordinator**: Student Name
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-## 🙏 Acknowledgments
-
-Built with React, Vite, and Tailwind CSS as a class assignment project.
+If you have questions about the club, email us at **acm@uncp.edu**
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: December 7, 2025
+Made by Shruti Pallissery and the UNCP ACM team 💻
