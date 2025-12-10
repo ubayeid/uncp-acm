@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python virtual environment (not needed for React project)
+venv/
+env/
+ENV/
