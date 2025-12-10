@@ -15,7 +15,7 @@ This is the website for the UNCP ACM (Association for Computing Machinery) stude
 First, clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/sp0076/uncp-acm.git
+git clone https://github.com/ubayeid/uncp-acm.git
 cd uncp-acm
 npm install
 ```
@@ -75,4 +75,4 @@ If you have questions about the club, email us at **acm@uncp.edu**
 
 ---
 
-Made by Shruti Pallissery 💻
+Made by Ubayeid Bin Habib 💻
