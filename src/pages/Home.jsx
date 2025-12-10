@@ -1,139 +1,159 @@
 import { Link } from "react-router-dom";
+import ImageCarousel from "../components/ImageCarousel";
 
 export default function Home() {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="relative py-12 sm:py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl -z-10"></div>
-        
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-block">
-            <div className="text-6xl mb-4">💻</div>
-            <p className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
-              Welcome to UNCP ACM
+    <>
+      {/* Full-Width Carousel */}
+      <div className="w-full">
+        <ImageCarousel />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-20">
+        {/* Hero Section */}
+        <section className="relative">
+          <div className="text-center space-y-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight">
+              UNCP's Largest Computer Science Organization
+            </h1>
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              UNCP ACM is dedicated to promoting interest in computing and information technologies among members of the UNCP community
             </p>
           </div>
+        </section>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
-            Build Skills,
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Build Community
+        {/* Main Sections */}
+        <section className="grid gap-8 md:grid-cols-3">
+        <Link
+          to="/about"
+          className="group rounded-lg border border-slate-200 bg-white overflow-hidden hover:shadow-lg transition"
+        >
+          <div className="aspect-video w-full overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop" 
+              alt="UNCP campus" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">About Us</h2>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              Learn about the history and mission of the UNCP ACM chapter.
+            </p>
+            <span className="text-sm font-medium text-slate-900 group-hover:underline">
+              Learn More →
             </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Join a welcoming space where UNCP students explore computing, collaborate on projects, and grow their tech careers together.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Link
-              to="/join"
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-3 text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition"
-            >
-              🚀 Join the Chapter
-            </Link>
-
-            <Link
-              to="/events"
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-blue-600 bg-white px-8 py-3 text-blue-600 font-semibold hover:bg-blue-50 transition"
-            >
-              📅 View Events
-            </Link>
           </div>
-        </div>
-      </section>
+        </Link>
 
-      {/* Features Section */}
-      <section className="space-y-6">
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">What We Offer</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">Everything you need to grow as a developer and professional</p>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              icon: "👥",
-              title: "Community",
-              description: "Connect with like-minded students passionate about tech and computing",
-              color: "from-blue-50 to-blue-100",
-              path: "/about"
-            },
-            {
-              icon: "🎓",
-              title: "Workshops",
-              description: "Learn practical skills through hands-on workshops and coding sessions",
-              color: "from-indigo-50 to-indigo-100",
-              path: "/events"
-            },
-            {
-              icon: "💼",
-              title: "Career Growth",
-              description: "Get resume help, interview prep, and career path guidance from mentors",
-              color: "from-purple-50 to-purple-100",
-              path: "/about"
-            },
-            {
-              icon: "🛠️",
-              title: "Projects",
-              description: "Build real-world projects and add them to your portfolio",
-              color: "from-pink-50 to-pink-100",
-              path: "/about"
-            },
-            {
-              icon: "🤝",
-              title: "Mentorship",
-              description: "Get one-on-one guidance from experienced students and professionals",
-              color: "from-orange-50 to-orange-100",
-              path: "/about"
-            },
-            {
-              icon: "🎉",
-              title: "Social Events",
-              description: "Network and have fun at our regular meetups and celebrations",
-              color: "from-green-50 to-green-100",
-              path: "/events"
-            },
-          ].map((feature, idx) => (
-            <Link
-              key={idx}
-              to={feature.path}
-              className={`rounded-2xl bg-gradient-to-br ${feature.color} border-2 border-white p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition cursor-pointer`}
-            >
-              <div className="text-4xl mb-3">{feature.icon}</div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
-              <p className="text-slate-700 text-sm leading-relaxed">{feature.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="grid gap-4 sm:grid-cols-3 py-8 px-6 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg">
-        {[
-          { number: "50+", label: "Active Members" },
-          { number: "12+", label: "Events/Semester" },
-          { number: "100%", label: "Welcoming" },
-        ].map((stat, idx) => (
-          <div key={idx} className="text-center">
-            <p className="text-4xl sm:text-5xl font-black text-white">{stat.number}</p>
-            <p className="text-blue-100 text-sm font-medium mt-1">{stat.label}</p>
+        <Link
+          to="/events"
+          className="group rounded-lg border border-slate-200 bg-white overflow-hidden hover:shadow-lg transition"
+        >
+          <div className="aspect-video w-full overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" 
+              alt="Coding workshop" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        ))}
-      </section>
+          <div className="p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Initiatives</h2>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              Learn more about the initiatives we're working on in each of our sub-organizations.
+            </p>
+            <span className="text-sm font-medium text-slate-900 group-hover:underline">
+              Learn More →
+            </span>
+          </div>
+        </Link>
 
-      {/* CTA Section */}
-      <section className="rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 sm:p-12 text-center text-white space-y-4">
-        <h2 className="text-3xl sm:text-4xl font-bold">Ready to Join?</h2>
-        <p className="text-slate-300 max-w-xl mx-auto">No experience necessary. Whether you\'re a beginner or experienced developer, there\'s a place for you here.</p>
         <Link
           to="/join"
-          className="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-3 font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition"
+          className="group rounded-lg border border-slate-200 bg-white overflow-hidden hover:shadow-lg transition"
         >
-          Get Started Now
+          <div className="aspect-video w-full overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
+              alt="Students collaborating" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Contact Us</h2>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              Learn how to get involved with UNCP ACM!
+            </p>
+            <span className="text-sm font-medium text-slate-900 group-hover:underline">
+              Learn More →
+            </span>
+          </div>
         </Link>
       </section>
-    </div>
+
+        {/* Recent Events */}
+        <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-slate-900">Recent Events</h2>
+        <p className="text-slate-600">
+          Check out the latest professional development and community-building events hosted by the UNCP ACM:
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            {
+              title: "Intro to Git & GitHub",
+              date: "Dec 15, 2024",
+              description: "A hands-on intro to version control and how to host your projects on GitHub. Perfect for beginners!",
+              image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=400&fit=crop",
+            },
+            {
+              title: "Web Dev Bootcamp",
+              date: "Jan 10, 2025",
+              description: "Learn HTML, CSS, and JavaScript basics. Build your first website from scratch!",
+              image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+            },
+            {
+              title: "AI & Machine Learning Talk",
+              date: "Jan 24, 2025",
+              description: "Guest speaker from a tech company discusses AI trends and career opportunities in the field.",
+              image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+            },
+            {
+              title: "Year-End Celebration & Networking",
+              date: "Feb 14, 2025",
+              description: "Celebrate our semester with food, games, and opportunities to network with members and guests!",
+              image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop",
+            },
+          ].map((event, idx) => (
+            <div
+              key={idx}
+              className="rounded-lg border border-slate-200 bg-white overflow-hidden hover:shadow-md transition"
+            >
+              <div className="aspect-video w-full overflow-hidden">
+                <img 
+                  src={event.image} 
+                  alt={event.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-semibold text-slate-900">{event.title}</h3>
+                  <span className="text-sm text-slate-500 whitespace-nowrap ml-4">{event.date}</span>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">{event.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <Link
+          to="/events"
+          className="inline-block text-sm font-medium text-slate-900 hover:underline"
+        >
+          View All Events →
+        </Link>
+      </section>
+
+      </div>
+    </>
   );
 }

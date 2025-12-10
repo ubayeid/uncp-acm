@@ -1,51 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-blue-200 bg-gradient-to-r from-blue-900 to-blue-800 text-white mt-16">
-      <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* About */}
-        <div className="space-y-2">
-          <h3 className="text-sm font-bold text-blue-100">ABOUT UNCP ACM</h3>
-          <p className="text-xs text-blue-200 leading-relaxed">
-            A student-led organization dedicated to fostering a community of builders, thinkers, and problem-solvers.
+    <footer className="border-t border-slate-200 bg-white mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center space-y-2">
+          <p className="text-sm text-slate-600">
+            © UNCP ACM {new Date().getFullYear()}
+          </p>
+          <p className="text-xs text-slate-500">
+            A student-run organization at UNC Pembroke
+          </p>
+          <p className="text-xs text-slate-500">
+            <strong>Contact Us</strong>: acm@uncp.edu
           </p>
         </div>
-
-        {/* Quick Links */}
-        <div className="space-y-2">
-          <h3 className="text-sm font-bold text-blue-100">QUICK LINKS</h3>
-          <ul className="text-xs text-blue-200 space-y-1">
-            <li><a href="/" className="hover:text-white transition">Home</a></li>
-            <li><a href="/about" className="hover:text-white transition">About</a></li>
-            <li><a href="/events" className="hover:text-white transition">Events</a></li>
-            <li><a href="/officers" className="hover:text-white transition">Officers</a></li>
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div className="space-y-2">
-          <h3 className="text-sm font-bold text-blue-100">CONTACT</h3>
-          <p className="text-xs text-blue-200">
-            📧 acm@uncp.edu
-            <br />
-            📍 UNC Pembroke, NC
-          </p>
-        </div>
-
-        {/* Social Media */}
-        <div className="space-y-2">
-          <h3 className="text-sm font-bold text-blue-100">FOLLOW US</h3>
-          <div className="flex gap-3">
-            <a href="#" className="text-lg hover:text-blue-300 transition" title="Discord">💬</a>
-            <a href="#" className="text-lg hover:text-blue-300 transition" title="GitHub">🐙</a>
-            <a href="#" className="text-lg hover:text-blue-300 transition" title="Instagram">📸</a>
-            <a href="#" className="text-lg hover:text-blue-300 transition" title="LinkedIn">💼</a>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom */}
-      <div className="border-t border-blue-700 px-4 py-4 text-center text-xs text-blue-300">
-        <p>© {new Date().getFullYear()} UNCP ACM Chapter • UNC Pembroke • Built with React + Vite + Tailwind CSS</p>
       </div>
     </footer>
   );
